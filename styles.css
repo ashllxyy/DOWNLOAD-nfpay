@@ -63,10 +63,6 @@ p {
     background: #45a049;
 }
 
-.ios {
-    background: #0175C2;
-}
-
-.ios:hover {
-    background: #0161A8;
+.ios-line {
+    margin-top: 50px;
 }
