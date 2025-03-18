@@ -14,9 +14,8 @@
         <h1>Download NFPay</h1>
         <p>Get the latest version of NFPay on your device.</p>
 
-        <a href="https://github.com/ashllxyy/DOWNLOAD-nfpay/releases/download/production/NFPay.apk" 
-           class="btn android" 
-           download>
+        <a href="https://github.com/ashllxyy/DOWNLOAD-nfpay/releases/download/production/NFPay.apk" class="btn android"
+            onclick="forceDownload(); return false;" download rel="noopener">
             Download APK for Android
         </a>
 
@@ -43,6 +42,16 @@
         function closePopup() {
             document.getElementById("pwa-popup").style.display = "none";
         }
+
+        function forceDownload() {
+            const link = document.createElement("a");
+            link.href = "https://github.com/ashllxyy/DOWNLOAD-nfpay/releases/download/production/NFPay.apk";
+            link.setAttribute("download", "NFPay.apk");
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
     </script>
 </body>
+
 </html>
