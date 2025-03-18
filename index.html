@@ -1,24 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download NFPay</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="container">
         <img src="logo.png" alt="NFPay Logo" class="logo">
         <h1>Download NFPay</h1>
         <p>Get the latest version of NFPay on your device.</p>
-        
-        <a href="https://github.com/ashllxyy/DOWNLOAD-nfpay/releases/download/production/NFPay.apk" class="btn android">
+
+        <a href="https://github.com/ashllxyy/DOWNLOAD-nfpay/releases/download/production/NFPay.apk" 
+           class="btn android" 
+           download>
             Download APK for Android
         </a>
-        
-        <a href="#" class="btn ios">
+
+        <a href="#" class="btn ios" onclick="showPWAInstructions()">
             Install PWA for iOS
         </a>
+
+        <div id="pwa-popup" class="popup">
+            <p>To install NFPay Online on iOS:</p>
+            <ol>
+                <li>Open <a href="https://nfpay.online" target="_blank">NFPay Online</a> in Safari.</li>
+                <li>Tap the Share button.</li>
+                <li>Select "Add to Home Screen".</li>
+            </ol>
+            <button onclick="closePopup()">Got it!</button>
+        </div>
     </div>
+
+    <script>
+        function showPWAInstructions() {
+            document.getElementById("pwa-popup").style.display = "block";
+        }
+
+        function closePopup() {
+            document.getElementById("pwa-popup").style.display = "none";
+        }
+    </script>
 </body>
 </html>
